@@ -30,7 +30,7 @@ class PhoneForm extends Component{
             <form onSubmit={this.handleSubmit}> {/* submit시 연결할 함수 등록*/}
                 <input
                 placeholder="Name"
-                value={this.state.name}
+                value={this.state.name} //제출될 값
                 onChange={this.handleChange} //input의 텍스트 값이 바뀔 때마다 발생
                 name="name"
                 />

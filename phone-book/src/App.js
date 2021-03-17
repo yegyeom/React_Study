@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div>
         <PhoneForm
-          onCreate={this.handleCreate}
+          onCreate={this.handleCreate} //handleCreate 함수를 onCreate에 넣은 것
         />
         <p>
           <input

@@ -58,20 +58,20 @@ class PhoneInfo extends Component{
       if(!prevState.editing && this.state.editing) {
       // editing 값이 false -> true 로 전환 될 때 (수정 버튼 눌렸을 때)
       // info 의 값을 state 에 넣어준다
-        this.setState({
-          name: info.name,
+        this.setState({ //수정 버튼 클릭 시 기존 값을 유지시키기 위해
+          name: info.name, 
           phone: info.phone
       })
     }
 
-    if (prevState.editing && !this.state.editing) {
-      // editing 값이 true -> false 로 전환 될 때
-      //onUpdate에 인자를 넣고 호출
-      onUpdate(info.id, {
-        name: this.state.name,
-        phone: this.state.phone
-      });
-     }
+      if (prevState.editing && !this.state.editing) {
+        // editing 값이 true -> false 로 전환 될 때
+        //onUpdate에 인자를 넣고 호출
+        onUpdate(info.id, {
+          name: this.state.name,
+          phone: this.state.phone
+        });
+      }
     }
 
     render() {
